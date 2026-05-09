@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\CleanArchitectureDemo.WebAPI.props" />
-</Project>
