@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Zl/m5Acq2oc=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Kaya3\\Documents\\GitHub\\.NET-ile-Clean-Architecture-Enterprise-Design-Patterns\\CleanArchitectureDemo\\src\\Core\\CleanArchitectureDemo.Domain\\CleanArchitectureDemo.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Kaya3\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
