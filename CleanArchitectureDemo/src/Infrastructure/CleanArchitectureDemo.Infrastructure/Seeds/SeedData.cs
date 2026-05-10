@@ -33,5 +33,55 @@ public static class SeedData
                 LastModifiedBy = (string?)null
             }
         );
+        var laptopId = Guid.Parse("aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa");
+        var telefonId = Guid.Parse("bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb");
+        var tisortId = Guid.Parse("cccccccc-cccc-cccc-cccc-cccccccccccc");
+        modelBuilder.Entity<Product>().HasData(
+            new
+            {
+                Id = laptopId,
+                Name = "Laptop",
+                Description = (string?)"Gaming laptop",
+                StockQuantity = 50,
+                ImageUrl = (string?)null,
+                CategoryId = elektronikId,
+                CreatedDate = new DateTime(2024, 1, 1, 0, 0, 0, DateTimeKind.Utc),
+                CreatedBy = (string?)null,
+                LastModifiedDate = (DateTime?)null,
+                LastModifiedBy = (string?)null
+            },
+            new
+            {
+                Id = telefonId,
+                Name = "Akıllı Telefon",
+                Description = (string?)"Son model akıllı telefon",
+                StockQuantity = 100,
+                ImageUrl = (string?)null,
+                CategoryId = elektronikId,
+                CreatedDate = new DateTime(2024, 1, 1, 0, 0, 0, DateTimeKind.Utc),
+                CreatedBy = (string?)null,
+                LastModifiedDate = (DateTime?)null,
+                LastModifiedBy = (string?)null
+            },
+            new
+            {
+                Id = tisortId,
+                Name = "Tişört",
+                Description = (string?)"Pamuklu tişört",
+                StockQuantity = 200,
+                ImageUrl = (string?)null,
+                CategoryId = giyimId,
+                CreatedDate = new DateTime(2024, 1, 1, 0, 0, 0, DateTimeKind.Utc),
+                CreatedBy = (string?)null,
+                LastModifiedDate = (DateTime?)null,
+                LastModifiedBy = (string?)null
+            }
+        );
+        
+        modelBuilder.Entity<Product>().OwnsOne(p => p.Price).HasData(
+            new { ProductId = laptopId, Amount = 25000m, Currency = "TRY" },
+            new { ProductId = telefonId, Amount = 15000m, Currency = "TRY" },
+            new { ProductId = tisortId, Amount = 250m, Currency = "TRY" }
+        );
     }
 }

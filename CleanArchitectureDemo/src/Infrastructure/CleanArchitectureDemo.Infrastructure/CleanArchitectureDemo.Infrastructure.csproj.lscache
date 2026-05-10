@@ -60,6 +60,8 @@ Context/AppDbContext.cs
 Migrations/
  20260508125622_InitialCreate.cs
  20260508125622_InitialCreate.Designer.cs
+ 20260510070213_SeedInitialData.cs
+ 20260510070213_SeedInitialData.Designer.cs
  AppDbContextModelSnapshot.cs
 obj/Debug/net9.0/
  .NETCoreApp,Version=v9.0.AssemblyAttributes.cs

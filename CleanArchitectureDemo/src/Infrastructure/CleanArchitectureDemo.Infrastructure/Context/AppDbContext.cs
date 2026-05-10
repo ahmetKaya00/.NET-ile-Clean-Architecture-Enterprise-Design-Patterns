@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using CleanArchitectureDemo.Domain.Common;
 using CleanArchitectureDemo.Domain.Entities;
+using CleanArchitectureDemo.Infrastructure.Seeds;
 
 namespace CleanArchitectureDemo.Infrastructure.Context;
 
@@ -18,7 +19,9 @@ public class AppDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+        SeedData.Seed(modelBuilder);
     }
+
 
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {
