@@ -53,6 +53,9 @@ TemporaryDependencyNodeTargetIdentifier=net9.0
 /warnaserror+:NU1605,SYSLIB0011
 
 [sourceFiles]
+Common/Behaviors/
+ LoggingBehavior.cs
+ ValidationBehavior.cs
 Common/Interfaces/
  ICategoryRepository.cs
  IGenericRepository.cs
@@ -68,6 +71,33 @@ DTOs/Product/
  CreateProductDto.cs
  ProductDto.cs
  UpdateProductDto.cs
+Features/Categories/Commands/CreateCategory/
+ CreateCategoryCommand.cs
+ CreateCategoryCommandHandler.cs
+ CreateCategoryCommandValidator.cs
+Features/Categories/Queries/GetAllCategories/
+ GetAllCategoriesQuery.cs
+ GetAllCategoriesQueryHandler.cs
+Features/Categories/Queries/GetCategoryById/
+ GetCategoryByIdQuery.cs
+ GetCategoryByIdQueryHandler.cs
+Features/Products/Queries/CreateProduct/
+ CreateProductCommand.cs
+ CreateProductCommandHandler.cs
+ CreateProductCommandValidator.cs
+Features/Products/Queries/DeleteProduct/
+ DeleteProductCommand.cs
+ DeleteProductCommandHandler.cs
+Features/Products/Queries/GetAllProducts/
+ GetAllProducts.cs
+ GetAllProductsQueryHandler.cs
+Features/Products/Queries/GetProductById/
+ GetProductByIdQuery.cs
+ GetProductByIdQueryHandler.cs
+Features/Products/Queries/UpdateProduct/
+ UpdateProductCommand.cs
+ UpdateProductCommandHandler.cs
+ UpdateProductCommandValidator.cs
 obj/Debug/net9.0/
  .NETCoreApp,Version=v9.0.AssemblyAttributes.cs
  CleanArchitectureDemo.Application.AssemblyInfo.cs
