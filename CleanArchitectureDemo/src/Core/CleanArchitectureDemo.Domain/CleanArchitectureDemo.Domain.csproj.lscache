@@ -63,8 +63,10 @@ Entities/
  Product.cs
 Enums/OrderStatus.cs
 Exceptions/
+ BadRequestException.cs
  DomainException.cs
  InvalidPriceException.cs
+ NotFoundException.cs
 obj/Debug/net9.0/
  .NETCoreApp,Version=v9.0.AssemblyAttributes.cs
  CleanArchitectureDemo.Domain.AssemblyInfo.cs

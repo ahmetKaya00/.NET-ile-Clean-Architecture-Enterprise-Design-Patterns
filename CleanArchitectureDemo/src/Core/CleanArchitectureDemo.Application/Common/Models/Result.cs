@@ -1,37 +1,43 @@
 namespace CleanArchitectureDemo.Application.Common.Models;
 
-public class Result<T>
+public class Result
 {
-    public bool IsSuccess { get; private set; }
-    public T? Data { get; private set; }
-    public string? Message { get; private set; }
-    public List<string>? Errors { get; private set; } = new();
+    public bool IsSuccess { get; protected set; }
+    public string? Message { get; protected set; }
+    public List<string> Errors { get; protected set; } = new();
+
+    public static Result Success(string? message = null)
+    {
+        return new Result { IsSuccess = true, Message = message };
+    }
+
+    public static Result Failure(string error)
+    {
+        return new Result { IsSuccess = false, Errors = new List<string> { error } };
+    }
+
+    public static Result Failure(List<string> errors)
+    {
+        return new Result { IsSuccess = false, Errors = errors };
+    }
+}
+
+public class Result<T> : Result
+{
+    public T? Data { get; protected set; }
 
     public static Result<T> Success(T data, string? message = null)
     {
-        return new Result<T>
-        {
-            IsSuccess = true,
-            Data = data,
-            Message = message
-        };
-    }
-    public static Result<T> Failure(string error)
-    {
-        return new Result<T>
-        {
-            IsSuccess = false,
-            Errors = new List<string> { error },
-        };
-    }
-    public static Result<T> Failure(List<string> errors)
-    {
-        return new Result<T>
-        {
-            IsSuccess = false,
-            Errors = errors,
-        };
+        return new Result<T> { IsSuccess = true, Data = data, Message = message };
     }
 
+    public new static Result<T> Failure(string error)
+    {
+        return new Result<T> { IsSuccess = false, Errors = new List<string> { error } };
+    }
 
+    public new static Result<T> Failure(List<string> errors)
+    {
+        return new Result<T> { IsSuccess = false, Errors = errors };
+    }
 }

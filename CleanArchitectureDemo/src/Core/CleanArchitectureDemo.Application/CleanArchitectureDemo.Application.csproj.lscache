@@ -63,7 +63,9 @@ Common/Interfaces/
  IUnitOfWork.cs
 Common/
  Mappings/MappingProfile.cs
- Models/Result.cs
+ Models/
+  PagedResult.cs
+  Result.cs
 DTOs/Category/
  CategoryDto.cs
  CreateCategoryDto.cs
