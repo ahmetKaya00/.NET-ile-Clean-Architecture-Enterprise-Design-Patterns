@@ -2,10 +2,11 @@ using Microsoft.EntityFrameworkCore;
 using CleanArchitectureDemo.Domain.Common;
 using CleanArchitectureDemo.Domain.Entities;
 using CleanArchitectureDemo.Infrastructure.Seeds;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace CleanArchitectureDemo.Infrastructure.Context;
 
-public class AppDbContext : DbContext
+public class AppDbContext : IdentityDbContext<ApplicationUser>
 {
     public AppDbContext(DbContextOptions<AppDbContext> options)
         : base(options)
@@ -20,6 +21,13 @@ public class AppDbContext : DbContext
         base.OnModelCreating(modelBuilder);
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
         SeedData.Seed(modelBuilder);
+
+        modelBuilder.Entity<ApplicationUser>(entity =>
+        {
+            entity.Property(u => u.FirstName).HasMaxLength(50).IsRequired();
+            entity.Property(u => u.LastName).HasMaxLength(50).IsRequired();
+            entity.Property(u => u.RefreshToken).HasMaxLength(500);
+        });
     }
 
 

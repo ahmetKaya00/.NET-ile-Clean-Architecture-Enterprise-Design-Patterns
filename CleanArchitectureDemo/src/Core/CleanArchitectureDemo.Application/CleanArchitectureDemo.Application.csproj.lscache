@@ -57,6 +57,7 @@ Common/Behaviors/
  LoggingBehavior.cs
  ValidationBehavior.cs
 Common/Interfaces/
+ IAuthService.cs
  ICategoryRepository.cs
  IGenericRepository.cs
  IProductRepository.cs
@@ -66,13 +67,23 @@ Common/
  Models/
   PagedResult.cs
   Result.cs
-DTOs/Category/
- CategoryDto.cs
- CreateCategoryDto.cs
-DTOs/Product/
- CreateProductDto.cs
- ProductDto.cs
- UpdateProductDto.cs
+DTOs/
+ Auth/AuthResponse.cs
+ Category/
+  CategoryDto.cs
+  CreateCategoryDto.cs
+ Product/
+  CreateProductDto.cs
+  ProductDto.cs
+  UpdateProductDto.cs
+Features/Auth/Commands/Login/
+ LoginCommand.cs
+ LoginCommandHandler.cs
+ LoginCommandValidator.cs
+Features/Auth/Commands/Register/
+ RegisterCommand.cs
+ RegisterCommandHandler.cs
+ RegisterCommandValidator.cs
 Features/Categories/Commands/CreateCategory/
  CreateCategoryCommand.cs
  CreateCategoryCommandHandler.cs
@@ -278,15 +289,28 @@ ServiceRegistration.cs
  fluentvalidation/12.1.1/lib/net8.0/FluentValidation.dll
  mediatr.contracts/2.0.1/lib/netstandard2.0/MediatR.Contracts.dll
  mediatr/14.1.0/lib/net9.0/MediatR.dll
+ microsoft.aspnetcore.cryptography.internal/10.0.7/lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+ microsoft.aspnetcore.cryptography.keyderivation/10.0.7/lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+ microsoft.extensions.caching.abstractions/10.0.7/lib/net9.0/Microsoft.Extensions.Caching.Abstractions.dll
+ microsoft.extensions.configuration.abstractions/10.0.7/lib/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll
+ microsoft.extensions.configuration.binder/10.0.7/lib/net9.0/Microsoft.Extensions.Configuration.Binder.dll
+ microsoft.extensions.configuration/10.0.7/lib/net9.0/Microsoft.Extensions.Configuration.dll
  microsoft.extensions.dependencyinjection.abstractions/10.0.7/lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
- microsoft.extensions.logging.abstractions/10.0.0/lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll
- microsoft.extensions.options/10.0.0/lib/net9.0/Microsoft.Extensions.Options.dll
- microsoft.extensions.primitives/10.0.0/lib/net9.0/Microsoft.Extensions.Primitives.dll
+ microsoft.extensions.dependencyinjection/10.0.7/lib/net9.0/Microsoft.Extensions.DependencyInjection.dll
+ microsoft.extensions.diagnostics.abstractions/10.0.7/lib/net9.0/Microsoft.Extensions.Diagnostics.Abstractions.dll
+ microsoft.extensions.diagnostics/10.0.7/lib/net9.0/Microsoft.Extensions.Diagnostics.dll
+ microsoft.extensions.identity.core/10.0.7/lib/netstandard2.0/Microsoft.Extensions.Identity.Core.dll
+ microsoft.extensions.identity.stores/10.0.7/lib/netstandard2.0/Microsoft.Extensions.Identity.Stores.dll
+ microsoft.extensions.logging.abstractions/10.0.7/lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll
+ microsoft.extensions.logging/10.0.7/lib/net9.0/Microsoft.Extensions.Logging.dll
+ microsoft.extensions.options.configurationextensions/10.0.7/lib/net9.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll
+ microsoft.extensions.options/10.0.7/lib/net9.0/Microsoft.Extensions.Options.dll
+ microsoft.extensions.primitives/10.0.7/lib/net9.0/Microsoft.Extensions.Primitives.dll
  microsoft.identitymodel.abstractions/8.14.0/lib/net9.0/Microsoft.IdentityModel.Abstractions.dll
  microsoft.identitymodel.jsonwebtokens/8.14.0/lib/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
  microsoft.identitymodel.logging/8.14.0/lib/net9.0/Microsoft.IdentityModel.Logging.dll
  microsoft.identitymodel.tokens/8.14.0/lib/net9.0/Microsoft.IdentityModel.Tokens.dll
- system.diagnostics.diagnosticsource/10.0.0/lib/net9.0/System.Diagnostics.DiagnosticSource.dll
+ system.diagnostics.diagnosticsource/10.0.7/lib/net9.0/System.Diagnostics.DiagnosticSource.dll
 
 [analyzerReferences]
 <DOTNET>/packs/Microsoft.NETCore.App.Ref/9.0.1/analyzers/dotnet/cs/
@@ -300,8 +324,8 @@ ServiceRegistration.cs
  Microsoft.CodeAnalysis.CSharp.NetAnalyzers.dll
  Microsoft.CodeAnalysis.NetAnalyzers.dll
 <NUGET>/
- microsoft.extensions.logging.abstractions/10.0.0/analyzers/dotnet/roslyn4.4/cs/Microsoft.Extensions.Logging.Generators.dll
- microsoft.extensions.options/10.0.0/analyzers/dotnet/roslyn4.4/cs/Microsoft.Extensions.Options.SourceGeneration.dll
+ microsoft.extensions.logging.abstractions/10.0.7/analyzers/dotnet/roslyn4.4/cs/Microsoft.Extensions.Logging.Generators.dll
+ microsoft.extensions.options/10.0.7/analyzers/dotnet/roslyn4.4/cs/Microsoft.Extensions.Options.SourceGeneration.dll
 
 [analyzerConfigFiles]
 <DOTNET>/sdk/9.0.102/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_9_default.globalconfig

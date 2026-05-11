@@ -54,6 +54,7 @@ TemporaryDependencyNodeTargetIdentifier=net9.0
 
 [sourceFiles]
 Controllers/
+ AuthController.cs
  BaseApiController.cs
  CategoriesController.cs
  ProductsController.cs
@@ -88,8 +89,6 @@ Program.cs
  Microsoft.AspNetCore.Connections.Abstractions.dll
  Microsoft.AspNetCore.CookiePolicy.dll
  Microsoft.AspNetCore.Cors.dll
- Microsoft.AspNetCore.Cryptography.Internal.dll
- Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
  Microsoft.AspNetCore.DataProtection.Abstractions.dll
  Microsoft.AspNetCore.DataProtection.dll
  Microsoft.AspNetCore.DataProtection.Extensions.dll
@@ -165,7 +164,6 @@ Program.cs
  Microsoft.Extensions.Configuration.KeyPerFile.dll
  Microsoft.Extensions.Configuration.UserSecrets.dll
  Microsoft.Extensions.Configuration.Xml.dll
- Microsoft.Extensions.Diagnostics.dll
  Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
  Microsoft.Extensions.Diagnostics.HealthChecks.dll
  Microsoft.Extensions.Features.dll
@@ -175,8 +173,6 @@ Program.cs
  Microsoft.Extensions.FileSystemGlobbing.dll
  Microsoft.Extensions.Hosting.dll
  Microsoft.Extensions.Http.dll
- Microsoft.Extensions.Identity.Core.dll
- Microsoft.Extensions.Identity.Stores.dll
  Microsoft.Extensions.Localization.Abstractions.dll
  Microsoft.Extensions.Localization.dll
  Microsoft.Extensions.Logging.Configuration.dll
@@ -186,7 +182,6 @@ Program.cs
  Microsoft.Extensions.Logging.EventSource.dll
  Microsoft.Extensions.Logging.TraceSource.dll
  Microsoft.Extensions.ObjectPool.dll
- Microsoft.Extensions.Options.ConfigurationExtensions.dll
  Microsoft.Extensions.Options.DataAnnotations.dll
  Microsoft.Extensions.WebEncoders.dll
  Microsoft.JSInterop.dll
@@ -362,6 +357,10 @@ Program.cs
  fluentvalidation/12.1.1/lib/net8.0/FluentValidation.dll
  mediatr.contracts/2.0.1/lib/netstandard2.0/MediatR.Contracts.dll
  mediatr/14.1.0/lib/net9.0/MediatR.dll
+ microsoft.aspnetcore.authentication.jwtbearer/9.0.0/lib/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+ microsoft.aspnetcore.cryptography.internal/10.0.7/lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+ microsoft.aspnetcore.cryptography.keyderivation/10.0.7/lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+ microsoft.aspnetcore.identity.entityframeworkcore/9.0.0/lib/net9.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
  microsoft.bcl.asyncinterfaces/8.0.0/lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll
  microsoft.bcl.cryptography/9.0.4/lib/net9.0/Microsoft.Bcl.Cryptography.dll
  microsoft.data.sqlclient/6.1.1/ref/net9.0/Microsoft.Data.SqlClient.dll
@@ -369,29 +368,33 @@ Program.cs
  microsoft.entityframeworkcore.relational/9.0.0/lib/net8.0/Microsoft.EntityFrameworkCore.Relational.dll
  microsoft.entityframeworkcore.sqlserver/9.0.0/lib/net8.0/Microsoft.EntityFrameworkCore.SqlServer.dll
  microsoft.entityframeworkcore/9.0.0/lib/net8.0/Microsoft.EntityFrameworkCore.dll
- microsoft.extensions.caching.abstractions/9.0.4/lib/net9.0/Microsoft.Extensions.Caching.Abstractions.dll
+ microsoft.extensions.caching.abstractions/10.0.7/lib/net9.0/Microsoft.Extensions.Caching.Abstractions.dll
  microsoft.extensions.caching.memory/9.0.4/lib/net9.0/Microsoft.Extensions.Caching.Memory.dll
- microsoft.extensions.configuration.abstractions/10.0.0/lib/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll
- microsoft.extensions.configuration.binder/10.0.0/lib/net9.0/Microsoft.Extensions.Configuration.Binder.dll
- microsoft.extensions.configuration/10.0.0/lib/net9.0/Microsoft.Extensions.Configuration.dll
+ microsoft.extensions.configuration.abstractions/10.0.7/lib/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll
+ microsoft.extensions.configuration.binder/10.0.7/lib/net9.0/Microsoft.Extensions.Configuration.Binder.dll
+ microsoft.extensions.configuration/10.0.7/lib/net9.0/Microsoft.Extensions.Configuration.dll
  microsoft.extensions.dependencyinjection.abstractions/10.0.7/lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
- microsoft.extensions.dependencyinjection/10.0.0/lib/net9.0/Microsoft.Extensions.DependencyInjection.dll
+ microsoft.extensions.dependencyinjection/10.0.7/lib/net9.0/Microsoft.Extensions.DependencyInjection.dll
  microsoft.extensions.dependencymodel/10.0.0/lib/net9.0/Microsoft.Extensions.DependencyModel.dll
- microsoft.extensions.diagnostics.abstractions/10.0.0/lib/net9.0/Microsoft.Extensions.Diagnostics.Abstractions.dll
+ microsoft.extensions.diagnostics.abstractions/10.0.7/lib/net9.0/Microsoft.Extensions.Diagnostics.Abstractions.dll
+ microsoft.extensions.diagnostics/10.0.7/lib/net9.0/Microsoft.Extensions.Diagnostics.dll
  microsoft.extensions.fileproviders.abstractions/10.0.0/lib/net9.0/Microsoft.Extensions.FileProviders.Abstractions.dll
  microsoft.extensions.hosting.abstractions/10.0.0/lib/net9.0/Microsoft.Extensions.Hosting.Abstractions.dll
- microsoft.extensions.logging.abstractions/10.0.0/lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll
- microsoft.extensions.logging/10.0.0/lib/net9.0/Microsoft.Extensions.Logging.dll
- microsoft.extensions.options/10.0.0/lib/net9.0/Microsoft.Extensions.Options.dll
- microsoft.extensions.primitives/10.0.0/lib/net9.0/Microsoft.Extensions.Primitives.dll
+ microsoft.extensions.identity.core/10.0.7/lib/netstandard2.0/Microsoft.Extensions.Identity.Core.dll
+ microsoft.extensions.identity.stores/10.0.7/lib/netstandard2.0/Microsoft.Extensions.Identity.Stores.dll
+ microsoft.extensions.logging.abstractions/10.0.7/lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll
+ microsoft.extensions.logging/10.0.7/lib/net9.0/Microsoft.Extensions.Logging.dll
+ microsoft.extensions.options.configurationextensions/10.0.7/lib/net9.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll
+ microsoft.extensions.options/10.0.7/lib/net9.0/Microsoft.Extensions.Options.dll
+ microsoft.extensions.primitives/10.0.7/lib/net9.0/Microsoft.Extensions.Primitives.dll
  microsoft.identity.client.extensions.msal/4.73.1/lib/net8.0/Microsoft.Identity.Client.Extensions.Msal.dll
  microsoft.identity.client/4.73.1/lib/net8.0/Microsoft.Identity.Client.dll
- microsoft.identitymodel.abstractions/8.14.0/lib/net9.0/Microsoft.IdentityModel.Abstractions.dll
- microsoft.identitymodel.jsonwebtokens/8.14.0/lib/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
- microsoft.identitymodel.logging/8.14.0/lib/net9.0/Microsoft.IdentityModel.Logging.dll
- microsoft.identitymodel.protocols.openidconnect/7.7.1/lib/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
- microsoft.identitymodel.protocols/7.7.1/lib/net8.0/Microsoft.IdentityModel.Protocols.dll
- microsoft.identitymodel.tokens/8.14.0/lib/net9.0/Microsoft.IdentityModel.Tokens.dll
+ microsoft.identitymodel.abstractions/8.18.0/lib/net9.0/Microsoft.IdentityModel.Abstractions.dll
+ microsoft.identitymodel.jsonwebtokens/8.18.0/lib/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
+ microsoft.identitymodel.logging/8.18.0/lib/net9.0/Microsoft.IdentityModel.Logging.dll
+ microsoft.identitymodel.protocols.openidconnect/8.0.1/lib/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+ microsoft.identitymodel.protocols/8.0.1/lib/net9.0/Microsoft.IdentityModel.Protocols.dll
+ microsoft.identitymodel.tokens/8.18.0/lib/net9.0/Microsoft.IdentityModel.Tokens.dll
  microsoft.openapi/1.6.14/lib/netstandard2.0/Microsoft.OpenApi.dll
  microsoft.sqlserver.server/1.0.0/lib/netstandard2.0/Microsoft.SqlServer.Server.dll
  serilog.aspnetcore/10.0.0/lib/net9.0/Serilog.AspNetCore.dll
@@ -409,9 +412,9 @@ Program.cs
  swashbuckle.aspnetcore.swaggerui/6.9.0/lib/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
  system.clientmodel/1.5.1/lib/net8.0/System.ClientModel.dll
  system.configuration.configurationmanager/9.0.10/lib/net9.0/System.Configuration.ConfigurationManager.dll
- system.diagnostics.diagnosticsource/10.0.0/lib/net9.0/System.Diagnostics.DiagnosticSource.dll
+ system.diagnostics.diagnosticsource/10.0.7/lib/net9.0/System.Diagnostics.DiagnosticSource.dll
  system.diagnostics.eventlog/9.0.10/lib/net9.0/System.Diagnostics.EventLog.dll
- system.identitymodel.tokens.jwt/7.7.1/lib/net8.0/System.IdentityModel.Tokens.Jwt.dll
+ system.identitymodel.tokens.jwt/8.18.0/lib/net9.0/System.IdentityModel.Tokens.Jwt.dll
  system.io.pipelines/10.0.0/lib/net9.0/System.IO.Pipelines.dll
  system.memory.data/8.0.1/lib/net8.0/System.Memory.Data.dll
  system.security.cryptography.pkcs/9.0.4/lib/net9.0/System.Security.Cryptography.Pkcs.dll
@@ -446,8 +449,8 @@ Program.cs
  Microsoft.CodeAnalysis.CSharp.Analyzers.dll
 <NUGET>/
  microsoft.entityframeworkcore.analyzers/9.0.0/analyzers/dotnet/cs/Microsoft.EntityFrameworkCore.Analyzers.dll
- microsoft.extensions.logging.abstractions/10.0.0/analyzers/dotnet/roslyn4.4/cs/Microsoft.Extensions.Logging.Generators.dll
- microsoft.extensions.options/10.0.0/analyzers/dotnet/roslyn4.4/cs/Microsoft.Extensions.Options.SourceGeneration.dll
+ microsoft.extensions.logging.abstractions/10.0.7/analyzers/dotnet/roslyn4.4/cs/Microsoft.Extensions.Logging.Generators.dll
+ microsoft.extensions.options/10.0.7/analyzers/dotnet/roslyn4.4/cs/Microsoft.Extensions.Options.SourceGeneration.dll
  system.clientmodel/1.5.1/analyzers/dotnet/cs/System.ClientModel.SourceGeneration.dll
  system.text.json/10.0.0/analyzers/dotnet/roslyn4.4/cs/System.Text.Json.SourceGeneration.dll
 

@@ -6,16 +6,19 @@ using CleanArchitectureDemo.Application.Common.Models;
 using CleanArchitectureDemo.Application.Features.Categories.Queries.GetAllCategories;
 using CleanArchitectureDemo.Application.Features.Categories.Queries.GetCategoryById;
 using CleanArchitectureDemo.Application.Features.Categories.Commands.CreateCategory;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace CleanArchitectureDemo.WebAPI.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize]
 public class CategoriesController : BaseApiController
 {
 
     [HttpGet]
+    [AllowAnonymous]
     [ProducesResponseType(typeof(Result<List<CategoryDto>>), StatusCodes.Status200OK)]
     public async Task<IActionResult> GetAll()
     {
@@ -37,6 +40,7 @@ public class CategoriesController : BaseApiController
     }
 
     [HttpPost]
+    [Authorize(Roles = "Admin")]
     [ProducesResponseType(typeof(Result<CategoryDto>), StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> Create([FromBody] CreateCategoryCommand command)

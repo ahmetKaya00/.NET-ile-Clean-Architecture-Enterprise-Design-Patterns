@@ -1,4 +1,5 @@
 ﻿using CleanArchitectureDemo.Domain.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace CleanArchitectureDemo.Infrastructure.Seeds;
@@ -77,11 +78,28 @@ public static class SeedData
                 LastModifiedBy = (string?)null
             }
         );
-        
+
         modelBuilder.Entity<Product>().OwnsOne(p => p.Price).HasData(
             new { ProductId = laptopId, Amount = 25000m, Currency = "TRY" },
             new { ProductId = telefonId, Amount = 15000m, Currency = "TRY" },
             new { ProductId = tisortId, Amount = 250m, Currency = "TRY" }
         );
+        
+        modelBuilder.Entity<IdentityRole>().HasData(
+    new IdentityRole
+    {
+        Id = "1",
+        Name = "Admin",
+        NormalizedName = "ADMIN",
+        ConcurrencyStamp = "1"
+    },
+    new IdentityRole
+    {
+        Id = "2",
+        Name = "User",
+        NormalizedName = "USER",
+        ConcurrencyStamp = "2"
+    }
+);
     }
 }
